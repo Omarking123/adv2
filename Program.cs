@@ -40,6 +40,13 @@ namespace adv2
                 Console.WriteLine( item );
             }
         }
+        public static void queue( Queue  <int> stack)
+        {
+            foreach (int item in stack)
+            {
+                Console.WriteLine(item);
+            }
+        }
         static void Main(string[] args)
         {
             #region  video 1 
@@ -152,6 +159,16 @@ namespace adv2
             //stack.Pop();
             //stack.TryPeek(out int top  );
             //stackPrint(stack);
+            #endregion
+            #region video 5 
+
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+
+            queue.Dequeue();
+
             #endregion
         }
     } 
