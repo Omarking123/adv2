@@ -32,6 +32,14 @@ namespace adv2
                 Console.WriteLine( item);
             }
         } 
+
+        public static void stackPrint(Stack <int> stack)
+        {
+            foreach(int item in stack)
+            {
+                Console.WriteLine( item );
+            }
+        }
         static void Main(string[] args)
         {
             #region  video 1 
@@ -113,26 +121,37 @@ namespace adv2
             #endregion
 
             #region  video 3 
-            List<int> list4 = new List<int>(new int[] { 1, 2, 3, 4, });
-            PrintList(list4);
-            list4.Add(1);
+            //List<int> list4 = new List<int>(new int[] { 1, 2, 3, 4, });
+            //PrintList(list4);
+            //list4.Add(1);
+            //#endregion
+
+            //#region video 4
+            //LinkedList<int> linkedlist = new LinkedList<int>();
+
+            //linkedlist.AddFirst(1);
+            //linkedlist.AddLast(2);
+            //linkedlist.AddLast(3);
+            //linkedlist.AddLast(4);
+
+            //Print(linkedlist);
+            //LinkedListNode<int> result = linkedlist.Find(1);
+            //linkedlist.AddBefore(result, 4);
+            //Console.WriteLine(linkedlist.First.Value);
+            //Console.WriteLine(linkedlist.Last.Value);
+            //linkedlist.Clear();
+            //Console.WriteLine(linkedlist.First.Next.Value);
             #endregion
 
-            #region video 4
-            LinkedList<int> linkedlist = new LinkedList<int>();
-
-            linkedlist.AddFirst(1);
-            linkedlist.AddLast(2);
-            linkedlist.AddLast(3);
-            linkedlist.AddLast(4);
-
-            Print(linkedlist);
-            LinkedListNode<int> result = linkedlist.Find(1);
-            linkedlist.AddBefore(result, 4);
-            Console.WriteLine(linkedlist.First.Value);
-            Console.WriteLine(linkedlist.Last.Value);
-            linkedlist.Clear();
-            Console.WriteLine(linkedlist.First.Next.Value);
+            #region video 4 
+            //Stack<int> stack = new Stack<int>();
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+            //stack.Pop();
+            //stack.TryPeek(out int top  );
+            //stackPrint(stack);
             #endregion
         }
     } 
