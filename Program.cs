@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace adv2
 {
@@ -23,6 +24,14 @@ namespace adv2
                 Console.Write(item);
             }
         }
+
+        public static void Print(LinkedList<int> Linkedlist)
+        {
+            foreach (int item in Linkedlist)
+            {
+                Console.WriteLine( item);
+            }
+        } 
         static void Main(string[] args)
         {
             #region  video 1 
@@ -109,7 +118,22 @@ namespace adv2
             list4.Add(1);
             #endregion
 
-            
+            #region video 4
+            LinkedList<int> linkedlist = new LinkedList<int>();
+
+            linkedlist.AddFirst(1);
+            linkedlist.AddLast(2);
+            linkedlist.AddLast(3);
+            linkedlist.AddLast(4);
+
+            Print(linkedlist);
+            LinkedListNode<int> result = linkedlist.Find(1);
+            linkedlist.AddBefore(result, 4);
+            Console.WriteLine(linkedlist.First.Value);
+            Console.WriteLine(linkedlist.Last.Value);
+            linkedlist.Clear();
+            Console.WriteLine(linkedlist.First.Next.Value);
+            #endregion
         }
     } 
 }
