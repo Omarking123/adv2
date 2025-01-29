@@ -4,8 +4,24 @@ namespace adv2
 {
     internal class Program
     {
-        public static void printarraylist(ArrayList arraylist) {
-           
+        public static int printarraylist(ArrayList arraylist) {
+           int sum = 0 ;
+            if (arraylist is not null)
+            {
+                for(int i =0; i < arraylist.Count; i++)
+                {
+                    sum += (int)arraylist[i];
+                }
+            }
+            return sum;
+        }
+
+        public  static void PrintList<T>(List<T> values)
+        {
+            foreach(T item in values)
+            {
+                Console.Write(item);
+            }
         }
         static void Main(string[] args)
         {
@@ -70,7 +86,31 @@ namespace adv2
             int i = list3.IndexOf(3);
             Console.WriteLine(i);
             #endregion
+
+            #region video 2 
+
+            ArrayList list = new ArrayList();
+
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            list.Add(6);
+            //list.Add("hello world ");
+            int sum = printarraylist(list);
+            Console.WriteLine(sum);
+
+            #endregion
+
+            #region  video 3 
+            List<int> list4 = new List<int>(new int[] { 1, 2, 3, 4, });
+            PrintList(list4);
+            list4.Add(1);
+            #endregion
+
+            
         }
     } 
 }
-}
+
